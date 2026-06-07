@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  whatsapp:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      PORT: 3001
+      API_SECRET: your-secret-key-here
+      APP_NAME: MyWhatsAppBot
+    volumes:
+      - ./auth_info:/app/auth_info
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
