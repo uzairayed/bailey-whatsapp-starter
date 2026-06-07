@@ -58,22 +58,18 @@ Wait for the message:
 WhatsApp connection established successfully!
 ```
 
-## Step 5: Test It Works
+## Step 5: Access the Dashboard & Form
 
-**Open another terminal** and test the API:
+The service includes ready-to-use web pages. Open in your browser:
 
-```bash
-# Health check (always works)
-curl http://localhost:3001/health
+**Admin Dashboard** (manage connection, send messages)
+```
+http://localhost:3001/admin.html
 ```
 
-Response:
-```json
-{
-  "status": "ok",
-  "whatsapp": "connected",
-  "uptime": 5.234
-}
+**Sample Registration Form** (users submit data → they get WhatsApp invite)
+```
+http://localhost:3001/form.html
 ```
 
 Success! 🎉
